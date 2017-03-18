@@ -110,6 +110,42 @@ RailsAdmin.config do |config|
     end
   end
 
+  config.model Product do
+    create do 
+      field :name
+      field :price
+      field :photo
+      field :description
+      field :status
+    end
+
+    edit do 
+      field :name
+      field :price
+      field :photo
+      field :description
+    end
+  end
+
+  config.model Stock do
+    create do
+      field :product
+
+      # sets minimum value 0
+      # it does not make sense quantity below 0
+      field :quantity, :integer do
+        html_attributes min: 0
+      end
+    end
+    edit do
+      field :product
+      
+      field :quantity, :integer do
+        html_attributes min: 0
+      end
+    end
+  end
+
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
