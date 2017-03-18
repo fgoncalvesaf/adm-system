@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  sale: one
+  payment_datet: 2017-03-10
+  value: 9.99
+
+two:
+  sale: two
+  payment_datet: 2017-03-10
+  value: 9.99
